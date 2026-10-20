@@ -1,0 +1,46 @@
+{
+  "incidents": [
+    {
+      "incident_id": "INC-301",
+      "service": "Checkout API - Payment Timeout Outage",
+      "date": "2026-04-06",
+      "responders": ["Ravi Menon", "Claire Dubois", "Tomasz Nowak", "Amara Eze"],
+      "review": "The review covered the forty minute checkout outage on Saturday evening, when roughly a third of card payments timed out. Ravi traced the root cause to the payment client connection pool, which was capped at twenty connections and exhausted as soon as weekend traffic peaked. Claire reported that the latency alert fired eleven minutes after customers were already affected, because its threshold was still set for last year's traffic. Tomasz found that the runbook for payment failures pointed to a dashboard that was deleted in February, so the on-call engineer lost time searching for the right graphs. Amara noted that failed orders were not retried, and about three hundred customers will need a refund or a manual retry by Wednesday. The team agreed the pool limit must be raised before the next weekend sale on 18 April, and that tidying the old log retention settings can wait until next quarter."
+    },
+    {
+      "incident_id": "INC-302",
+      "service": "Customer Login Service - Expired TLS Certificate",
+      "date": "2026-04-08",
+      "responders": ["Fatima Rahman", "Lukas Becker", "Mei Tanaka", "Jonah Price"],
+      "review": "The review examined the morning when customers could not sign in for nearly an hour because the TLS certificate on the login load balancer had expired. Fatima explained that the certificate was renewed by hand every year and the reminder went to a mailbox belonging to an engineer who left in January. Lukas reported that the synthetic login check only tested the internal endpoint, so it stayed green while the public site was failing. Mei found two more certificates on the partner gateway that expire within the next three weeks and have no automatic renewal. Jonah said the status page was updated forty minutes late because nobody on call had access to the status page account. The team agreed that automated renewal must be in place before the partner certificates expire on 29 April, that status page access should be added to the on-call onboarding, and that the old login theme files can be cleaned up later."
+    },
+    {
+      "incident_id": "INC-303",
+      "service": "Reporting Database - Disk Full Failure",
+      "date": "2026-04-13",
+      "responders": ["Nadia Volkova", "Ethan Clarke", "Ibrahim Sow", "Paula Gomez"],
+      "review": "The review covered the overnight failure of the reporting database, which stopped accepting writes at 02:10 when its data disk reached one hundred percent. Nadia found that a nightly export job had been writing temporary files to the data disk instead of scratch storage since a configuration change three weeks ago. Ethan reported that the disk usage alert existed but was routed to a chat channel that nobody monitors overnight. Ibrahim noted that the most recent restore test for this database was done fourteen months ago, so the team could not be sure the backups were usable during the incident. Paula said finance dashboards showed stale figures until midday, and the month end report due on Friday must be regenerated once the data is confirmed complete. The team agreed the export job must be fixed before tonight's run, and that resizing the archive volume is a nice to have for later."
+    },
+    {
+      "incident_id": "INC-304",
+      "service": "Mobile App Push Notifications - Duplicate Messages",
+      "date": "2026-04-15",
+      "responders": ["Sebastian Ortiz", "Hana Kim", "Oliver Grant", "Zainab Musa"],
+      "review": "The review looked at Tuesday's incident in which about forty thousand app users received the same promotional push notification up to six times. Sebastian traced the duplicates to a retry loop in the notification worker, which resent a batch whenever the provider responded slowly, even when the first send had succeeded. Hana reported that the worker has no idempotency key, so the provider had no way to recognise repeated messages. Oliver noted that the marketing team scheduled the campaign without a staged rollout, and the full audience was targeted at once. Zainab said the support queue received over nine hundred complaints and the app store rating dropped, so a public apology must go out by Thursday. The team agreed that sending must stay paused until the retry logic is fixed and tested, that staged rollouts should become the default for campaigns, and that the notification icon refresh can wait."
+    },
+    {
+      "incident_id": "INC-305",
+      "service": "Search Service - Index Rebuild Slowdown",
+      "date": "2026-04-20",
+      "responders": ["Daniela Rossi", "Kwame Boateng", "Anika Shah", "Felix Wagner"],
+      "review": "The review covered Monday morning, when product search response times rose from two hundred milliseconds to over six seconds for most of the trading day. Daniela found that a full index rebuild had been started during business hours because the scheduled job ignored the maintenance window after the server clock was moved to UTC. Kwame reported that the search cluster has only three nodes and no headroom, so the rebuild starved live queries of memory. Anika noted that the on-call alert for slow searches fired, but its runbook step to pause the rebuild required a permission that no responder had. Felix said that conversion on the website fell by eighteen percent, and the sales team wants a written incident summary by Friday. The team agreed the rebuild schedule must be corrected before next Monday's run, that a fourth node should be costed this month, and that the old synonym list review can wait."
+    },
+    {
+      "incident_id": "INC-306",
+      "service": "Internal File Sharing - Public Link Exposure",
+      "date": "2026-04-23",
+      "responders": ["Imogen Hayes", "Rashid Al-Amin", "Chen Wei", "Laura Fischer"],
+      "review": "The review examined the discovery that around two hundred internal documents had been shared through public links that never expired. Imogen reported that the file sharing platform defaulted to public links after an upgrade in March, and nobody noticed the setting had changed. Rashid found that at least four of the exposed files contain customer contact details, so the data protection officer must be informed within seventy two hours of discovery. Chen noted that audit logging was switched off on the platform to save storage, so the team cannot yet tell whether any outsider opened the links. Laura said all public links were revoked on Wednesday, but staff still need clear guidance on how to share files safely before the end of the week. The team agreed that audit logging must be turned back on immediately, that link expiry should default to seven days, and that renaming the shared folders can happen later."
+    }
+  ]
+}

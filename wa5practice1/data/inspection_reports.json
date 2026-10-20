@@ -1,0 +1,46 @@
+{
+  "inspections": [
+    {
+      "inspection_id": "INS-201",
+      "property": "Harbourview Apartments - Block A Quarterly Inspection",
+      "date": "2026-03-02",
+      "crew": ["Leila Haddad", "Connor Walsh", "Arjun Pillai", "Beatriz Souza"],
+      "report": "The quarterly walk-through of Block A covered the roof, stairwells, plant room and twelve occupied units. Leila reported that the flat roof membrane above flats 9 and 10 has lifted along a two metre seam, and tenants in flat 10 have already noticed a damp patch on the bedroom ceiling. Connor found that the emergency lighting in the north stairwell failed its three hour discharge test and two fittings did not light at all, which breaches the fire safety log. Arjun noted that the boiler in the plant room is showing a pressure drop overnight and has needed topping up twice this month. Beatriz said the communal entrance door closer is broken, so the security door is left ajar most evenings and residents have complained. The team agreed that the annual gas safety certificate expires on 20 March and must be renewed before then, and that the bin store lighting can wait until the summer works."
+    },
+    {
+      "inspection_id": "INS-202",
+      "property": "Riverside Primary School - Pre-term Safety Check",
+      "date": "2026-03-04",
+      "crew": ["Hamid Karimi", "Sophie Laurent", "Diego Alvarez", "Nkechi Obi"],
+      "report": "The pre-term safety check of Riverside Primary covered classrooms, the sports hall, the kitchen and the playground. Hamid found that the playground climbing frame has a cracked support post at the base and has taped it off, but the frame must be repaired or removed before pupils return on Monday. Sophie reported that the kitchen extractor fan is running at roughly half speed and the grease filters have not been cleaned since November. Diego noted that three classroom windows on the first floor will not lock, and the restrictors that stop them opening fully are missing. Nkechi said the sports hall floor has a raised board near the climbing wall that is a trip hazard during lessons. The team agreed the staff car park line markings are faded but are cosmetic and can be scheduled for the half-term break, while anything touching pupil safety must be closed before the term starts."
+    },
+    {
+      "inspection_id": "INS-203",
+      "property": "Northgate Office Park - Building 3 HVAC Review",
+      "date": "2026-03-09",
+      "crew": ["Marta Kowalczyk", "Benjamin Ross", "Aisha Mensah", "Takeshi Mori"],
+      "report": "The review of Building 3 focused on heating, ventilation and air conditioning after a run of tenant complaints. Marta reported that the third floor east wing is reaching twenty seven degrees by mid-afternoon because one of the two rooftop chillers has tripped repeatedly over the past fortnight. Benjamin found that the air handling unit filters on levels one and two are overdue for replacement by six weeks, and the pressure readings confirm they are heavily loaded. Aisha noted that the building management system is still showing alarms from a sensor that was removed last year, so real alarms are being ignored by the night security team. Takeshi said the condensate drain on the second floor fan coil unit is blocked and has started dripping onto a suspended ceiling tile above the reception desk. The tenants have asked for a written update on cooling before the lease review meeting on 30 March."
+    },
+    {
+      "inspection_id": "INS-204",
+      "property": "Maple Court Care Home - Monthly Facilities Audit",
+      "date": "2026-03-11",
+      "crew": ["Grace Mwangi", "Patrick Doyle", "Ingrid Larsen", "Samir Haddou"],
+      "report": "The monthly audit of Maple Court covered resident rooms, bathrooms and the nurse call system. Grace reported that the nurse call button in room 14 does not register at the central station, and the night staff have been checking on the resident by hand every hour as a workaround. Patrick found that the hot water at two bathroom outlets on the ground floor is reaching fifty two degrees, above the safe limit for vulnerable residents, which suggests a failed thermostatic mixing valve. Ingrid noted that the passenger lift has stopped between floors twice this month and the maintenance contractor has not yet attended. Samir said the garden path handrail is loose along a four metre section, and residents use it daily to reach the conservatory. The group agreed that the dining hall repaint is planned for April and does not need to move, but every item affecting resident safety needs a firm repair date."
+    },
+    {
+      "inspection_id": "INS-205",
+      "property": "Eastfield Retail Unit 7 - Handover Inspection",
+      "date": "2026-03-16",
+      "crew": ["Victor Lindqvist", "Hannah Brooks", "Ola Adebayo", "Rina Kapoor"],
+      "report": "The handover inspection of Unit 7 took place before the new tenant fit-out begins. Victor reported that the roller shutter at the loading bay jams halfway and can only be opened by hand, which will block deliveries once the tenant moves in. Hannah found that the fire alarm panel is showing a fault on zone four, and the last service record on file is more than fourteen months old. Ola noted that there is visible water staining around the rear fire exit, and the door threshold seal is torn, so rain is being driven inside during storms. Rina said that the electrical installation condition report is missing from the handover pack, and the tenant's insurer will not provide cover without it. The landlord confirmed that the fit-out contractor arrives on 6 April and asked that anything blocking access or certification be fixed first, while the faded signage can be left to the tenant."
+    },
+    {
+      "inspection_id": "INS-206",
+      "property": "Lakeside Leisure Centre - Pool Plant Inspection",
+      "date": "2026-03-19",
+      "crew": ["Owen Fitzgerald", "Yasmin Saleh", "Kofi Asante", "Elise Moreau"],
+      "report": "The inspection of the Lakeside pool plant room and changing areas followed a short closure last weekend. Owen reported that the chlorine dosing pump is cycling irregularly, and the manual water tests show free chlorine swinging well outside the target range during busy sessions. Yasmin found that the extract fan above the changing rooms is not running, so condensation is collecting on the ceiling and two tiles have already started to come away. Kofi noted that the plant room door is propped open for ventilation, which leaves chemical storage unsecured and visible to the public corridor. Elise said the poolside emergency alarm pull cord near the deep end has been cut short and cannot be reached from the water. The duty manager agreed that the sauna heater replacement can wait for the September shutdown, but the centre will not reopen the main pool until the dosing and alarm problems are cleared."
+    }
+  ]
+}
