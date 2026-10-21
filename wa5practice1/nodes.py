@@ -1,16 +1,11 @@
-"""Load, extract, assign, and format the inspection workflow state."""
-
 import json
 from pathlib import Path
-
 from langchain_core.messages import AIMessage
-
 from agents import assign_technician_and_urgency, extract_repair_tasks
 from state import InspectionState
 
 
 REPORTS_FILE = Path(__file__).resolve().parent / "data" / "inspection_reports.json"
-
 
 def load_inspection(state: InspectionState) -> dict:
     """Read an identifier and load the matching inspection unchanged."""
@@ -38,7 +33,6 @@ def load_inspection(state: InspectionState) -> dict:
         "messages": [AIMessage(content=f"Inspection {inspection_id} was not found.")],
     }
 
-
 def extract_repairs(state: InspectionState) -> dict:
     """Store each extracted repair with an empty technician and urgency."""
     if not state["report"]:
@@ -55,7 +49,6 @@ def extract_repairs(state: InspectionState) -> dict:
         "messages": [AIMessage(content=f"Extracted {len(tasks)} work orders.")],
     }
 
-
 def assign_technicians(state: InspectionState) -> dict:
     """Assign each repair separately, preserving the tasks and their order."""
     orders = []
@@ -66,7 +59,6 @@ def assign_technicians(state: InspectionState) -> dict:
         "work_orders": orders,
         "messages": [AIMessage(content=f"Assigned {len(orders)} work orders.")],
     }
-
 
 def format_summary(state: InspectionState) -> dict:
     """Format the inspection details and all assigned repairs for the terminal."""
